@@ -1,3 +1,5 @@
+"use strict"
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -7,15 +9,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const listItem = ingredients => ingredients.map(element => {
+const listOfItems = ingredients => ingredients.map(element => {
   const item = document.createElement('li')
   item.className = ('item')
   item.textContent = element
   return item
 });
-const itemLi = document.querySelector('#ingredients');
-itemLi.append(...listItem(ingredients));
-console.log(itemLi);
+const itemList = document.querySelector('#ingredients');
+itemList.append(...listOfItems(ingredients));
+
 
 
 

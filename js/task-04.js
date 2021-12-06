@@ -1,3 +1,5 @@
+"use strict"
+
 let counterValue = 0;
 
 const refs = {
@@ -9,7 +11,6 @@ const refs = {
 const changeValue = (step) => {
     counterValue += step;
     refs.counterValue.textContent = counterValue;
-    
 };
 
 refs.increment.addEventListener('click', () => changeValue(+1));
