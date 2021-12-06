@@ -1,17 +1,16 @@
 "use strict"
 const refs = {
-  changeColorBtn: document.querySelector('.change-color'),
-  changeColorLabel: document.querySelector('.color')
+  button: document.querySelector('.change-color'),
+  color: document.querySelector('.color')
 }
 
-const onChangeColorBtnClick = () => {
+const changeColor = () => {
   const color = getRandomHexColor()
   document.body.style.background = color;
-  refs.changeColorLabel.textContent = color;
-;
-  console.log(changeColorLabel)
-}
-refs.changeColorBtn.addEventListener('click', onChangeColorBtnClick);
+  refs.color.textContent = color;
+};
+
+refs.button.addEventListener('click', changeColor);
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
